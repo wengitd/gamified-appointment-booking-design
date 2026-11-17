@@ -8,7 +8,7 @@ Prototipo frontend de gestión para consulta psicológica particular, inspirado 
 
 ## Cómo levantarlo
 1. Descomprime la carpeta.
-2. Abre una terminal dentro de `menta-prototipo`.
+2. Abre una terminal.
 3. Instala dependencias:
 
    ```bash
