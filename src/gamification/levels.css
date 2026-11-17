@@ -1,0 +1,47 @@
+/* Nivel de jardinera (progreso que nunca se reinicia) */
+.level-card h2{margin-top:6px}
+.level-total{flex-shrink:0;padding:6px 12px;border-radius:999px;background:var(--teal-100);color:var(--teal-800);font-weight:900;font-size:15px;box-shadow:0 3px 0 var(--teal-200)}
+.level-hint{margin:10px 0 0;font-size:13px;font-weight:800;color:var(--ink-soft)}
+.level-row{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.level-row li{display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px;padding:12px 6px;border-radius:18px;border:2px solid var(--line);border-bottom-width:4px;background:var(--bg);min-width:0}
+.level-row li.reached{border-color:var(--teal-200);background:var(--teal-50)}
+.level-row li.current{border-color:var(--teal-500);border-bottom-color:var(--teal-700);background:var(--surface)}
+.level-row li.locked{color:var(--ink-muted)}
+.level-row li.locked .level-unlocks{filter:grayscale(1);opacity:.5}
+.level-num{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:14px;background:var(--teal-700);color:#fff}
+.level-row li.locked .level-num{background:var(--neutral-100);color:var(--ink-muted);font-size:13px}
+.level-row b{font-size:12px;line-height:1.2;overflow-wrap:anywhere}.level-row small{font-size:11px;color:var(--ink-muted);font-weight:700}
+.level-unlocks{font-size:18px;letter-spacing:2px}
+.level-row li.current .level-num{animation:level-pop .5s ease-out}
+@keyframes level-pop{0%{transform:scale(.6)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
+
+.theme-picker{margin-top:20px}.theme-picker h3{margin:0 0 10px;font-size:15px}
+.theme-options{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+.theme-option{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 8px;border-radius:18px;border:2px solid var(--line);border-bottom-width:4px;background:var(--surface);color:var(--ink);transition:transform .08s,border-color .15s}
+.theme-option:not(:disabled):hover{border-color:var(--teal-200)}
+.theme-option:not(:disabled):active{transform:translateY(2px)}
+.theme-option.active{border-color:var(--teal-500);border-bottom-color:var(--teal-700);background:var(--teal-50)}
+.theme-option:focus-visible{outline:3px solid var(--teal-500);outline-offset:2px}
+.theme-option:disabled{cursor:not-allowed;background:var(--bg);color:var(--ink-muted)}
+.theme-option:disabled .theme-emojis{filter:grayscale(1);opacity:.45}
+.theme-emojis{font-size:18px;letter-spacing:1px;white-space:nowrap}
+.theme-option b{font-size:13px}.theme-option small{font-size:11px;font-weight:800}
+
+/* Fondos de la tarjeta de bienvenida (texto blanco con contraste AA) */
+.welcome.theme-2{background:linear-gradient(135deg,var(--petrol-700),var(--teal-800))}
+.welcome.theme-3{background:radial-gradient(var(--petrol-400) 1.5px,transparent 1.8px) 0 0/18px 18px,linear-gradient(135deg,var(--petrol-700),var(--petrol-600))}
+.welcome.theme-4{background:repeating-linear-gradient(-45deg,transparent 0 14px,var(--petrol-600) 14px 28px),linear-gradient(135deg,var(--teal-800),var(--petrol-700))}
+.welcome.theme-5{background:radial-gradient(circle at 88% 20%,var(--teal-700),transparent 45%),radial-gradient(circle at 10% 110%,var(--petrol-400),transparent 50%),linear-gradient(160deg,var(--petrol-900),var(--teal-800));border-color:var(--petrol-900)}
+
+/* Accesorio de la mascota: <span className="mascot-accessory"> dentro de .mascot */
+.mascot{position:relative}
+.mascot-accessory{position:absolute;top:-8px;right:-6px;font-size:26px;line-height:1;filter:drop-shadow(0 2px 0 var(--petrol-900))}
+
+@media(max-width:760px){
+  .level-row{gap:4px}.level-row li{padding:8px 2px;border-radius:14px}
+  .level-row b{font-size:10px}.level-row small{font-size:9px}.level-unlocks{font-size:14px;letter-spacing:0}
+  .level-num{width:26px;height:26px;font-size:12px}
+  .theme-options{grid-template-columns:1fr 1fr}.theme-emojis{font-size:15px}
+  .level-card .card-heading{align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){.level-row li.current .level-num{animation:none}.theme-option{transition:none}.theme-option:not(:disabled):active{transform:none}}

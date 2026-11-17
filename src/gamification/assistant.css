@@ -1,0 +1,33 @@
+/* Configuración del asistente */
+.assistant-settings h3{margin:0 0 10px;font-size:16px;font-weight:800;color:var(--ink)}
+.settings-close{display:grid;place-items:center;width:38px;height:38px;flex-shrink:0;border-radius:14px;background:var(--teal-100);color:var(--teal-700);box-shadow:0 3px 0 var(--teal-200);transition:transform .08s,box-shadow .08s}
+.settings-close:active{transform:translateY(2px);box-shadow:0 1px 0 var(--teal-200)}
+.intensity-options{display:grid;gap:10px}
+.intensity-option{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:var(--surface);border:2px solid var(--line);border-bottom-width:4px;border-radius:16px;cursor:pointer;transition:border-color .15s,background .15s,transform .08s}
+.intensity-option:hover{border-color:var(--teal-200)}
+.intensity-option:active{transform:translateY(2px);border-bottom-width:2px;margin-bottom:2px}
+.intensity-option:focus-visible{outline:3px solid var(--teal-500);outline-offset:2px}
+.intensity-option.selected{background:var(--teal-50);border-color:var(--teal-500);border-bottom-color:var(--teal-700)}
+.intensity-dot{flex-shrink:0;width:20px;height:20px;margin-top:1px;border-radius:50%;border:2px solid var(--line-strong);background:var(--surface);transition:border-color .15s,box-shadow .15s}
+.intensity-option.selected .intensity-dot{border-color:var(--teal-700);box-shadow:inset 0 0 0 4px var(--surface),inset 0 0 0 10px var(--teal-700)}
+.intensity-text{display:grid;gap:3px;min-width:0}
+.intensity-text b{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-weight:900;font-size:15px;color:var(--ink)}
+.intensity-text>span{font-size:13px;color:var(--ink-soft);line-height:1.35}
+.intensity-now{font-size:11px;font-weight:800;color:var(--teal-800);background:var(--teal-100);border-radius:99px;padding:2px 8px}
+.settings-note{margin:14px 0 0;padding:10px 12px;border-radius:14px;background:var(--neutral-100);color:var(--ink-soft);font-size:13px;font-weight:700}
+@media(max-width:480px){.intensity-option{padding:10px 12px;gap:10px}.assistant-settings .modal-actions>*{flex:1}}
+
+/* Golpecito del chip de hojas (modo discreto) */
+.stat-chip.has-bump{position:relative;overflow:visible}
+.stat-chip.bump{animation:chip-bump .6s ease-out}
+.leaf-bump{position:absolute;right:-4px;top:-6px;pointer-events:none;font-size:12px;font-weight:900;color:var(--teal-700);background:var(--teal-100);border:2px solid var(--teal-200);border-radius:99px;padding:0 6px;line-height:16px;animation:leaf-float 1.2s ease-out forwards}
+@keyframes chip-bump{0%{transform:scale(1)}30%{transform:scale(1.14);border-color:var(--teal-500)}60%{transform:scale(.97)}100%{transform:scale(1)}}
+@keyframes leaf-float{0%{opacity:0;transform:translateY(4px)}20%{opacity:1;transform:translateY(-6px)}100%{opacity:0;transform:translateY(-22px)}}
+
+@media(prefers-reduced-motion:reduce){
+  .intensity-option,.intensity-dot,.settings-close{transition:none}
+  .stat-chip.bump{animation:chip-glow .6s linear}
+  .leaf-bump{animation:leaf-fade 1.2s linear forwards}
+  @keyframes chip-glow{0%,100%{border-color:var(--line)}30%,70%{border-color:var(--teal-500)}}
+  @keyframes leaf-fade{0%,100%{opacity:0}15%,75%{opacity:1}}
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="humana-mente">
+  <!-- Isotipo: solo la cara del cerebro, simplificada para tamaños pequeños -->
+  <rect width="64" height="64" rx="18" fill="#ece6fb"/>
+  <g fill="#f27b93">
+    <circle cx="22" cy="26" r="11"/><circle cx="31" cy="19" r="11"/><circle cx="42" cy="22" r="11"/>
+    <circle cx="45" cy="36" r="10"/><circle cx="36" cy="44" r="10"/><circle cx="24" cy="43" r="10"/>
+    <circle cx="19" cy="35" r="10"/><circle cx="32" cy="32" r="16"/>
+  </g>
+  <g fill="#f9a6b0">
+    <circle cx="22" cy="26" r="8.5"/><circle cx="31" cy="19" r="8.5"/><circle cx="42" cy="22" r="8.5"/>
+    <circle cx="45" cy="36" r="7.5"/><circle cx="36" cy="44" r="7.5"/><circle cx="24" cy="43" r="7.5"/>
+    <circle cx="19" cy="35" r="7.5"/><circle cx="32" cy="32" r="13.5"/>
+  </g>
+  <g fill="none" stroke="#3d2c66" stroke-width="2.2" stroke-linecap="round">
+    <circle cx="25" cy="31" r="7"/><circle cx="39" cy="31" r="7"/>
+    <path d="M30.5 31.5q1.5-1.5 3 0"/>
+    <path d="M22 33q3-4 6 0"/><path d="M36 33q3-4 6 0"/>
+  </g>
+  <path d="M28.5 39q3.5 5 7 0z" fill="#3d2c66" stroke="#3d2c66" stroke-width="1.6" stroke-linejoin="round"/>
+</svg>

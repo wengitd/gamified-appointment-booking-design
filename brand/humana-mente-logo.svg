@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" role="img" aria-label="humana-mente · Tu bienestar, paso a paso">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&amp;display=swap');
+    .word{font-family:Fredoka,Nunito,system-ui,sans-serif;font-weight:600;font-size:100px;letter-spacing:-1px}
+    .tag{font-family:Fredoka,Nunito,system-ui,sans-serif;font-weight:500;font-size:32px}
+  </style>
+  <defs>
+    <!-- Silueta del cerebro: unión de círculos -->
+    <g id="brain">
+      <circle cx="300" cy="150" r="52"/><circle cx="348" cy="108" r="52"/><circle cx="410" cy="104" r="52"/>
+      <circle cx="462" cy="148" r="50"/><circle cx="466" cy="206" r="46"/><circle cx="418" cy="240" r="46"/>
+      <circle cx="352" cy="244" r="46"/><circle cx="296" cy="214" r="46"/><circle cx="380" cy="175" r="85"/>
+    </g>
+  </defs>
+
+  <!-- Fondo lavanda -->
+  <path d="M215 250c-25-70 20-140 85-165 70-28 130-40 190-10 55 28 60 80 105 95 50 17 60 80 30 120-30 40-100 40-200 35-95-5-185 0-210-75z" fill="#ece6fb"/>
+
+  <!-- Destellos -->
+  <g stroke="#f6c64a" stroke-width="13" stroke-linecap="round">
+    <path d="M160 50l12 30"/><path d="M124 82l26 20"/>
+    <path d="M660 300l-8 28"/><path d="M700 312l-22 20"/>
+  </g>
+
+  <!-- Brazo levantado -->
+  <path d="M290 245c-50 12-80-15-82-70" fill="none" stroke="#45306f" stroke-width="20" stroke-linecap="round"/>
+  <rect x="196" y="82" width="20" height="62" rx="10" fill="#45306f"/>
+  <circle cx="208" cy="152" r="26" fill="#45306f"/>
+
+  <!-- Cerebro -->
+  <use href="#brain" fill="#f27b93" stroke="#f27b93" stroke-width="16"/>
+  <use href="#brain" fill="#f9a6b0"/>
+  <g fill="none" stroke="#f27b93" stroke-width="6" stroke-linecap="round">
+    <path d="M360 72q14 8 10 26"/><path d="M432 70q10 14 2 28"/>
+    <path d="M262 160q14 0 20 12"/><path d="M496 196q-14 2-18 14"/>
+    <path d="M330 268q4-14 18-16"/><path d="M420 280q-2-14 10-20"/>
+  </g>
+
+  <!-- Mejillas -->
+  <ellipse cx="292" cy="212" rx="18" ry="12" fill="#f27b93" opacity=".45"/>
+  <ellipse cx="466" cy="212" rx="18" ry="12" fill="#f27b93" opacity=".45"/>
+
+  <!-- Lentes, ojos y boca -->
+  <g fill="none" stroke="#3d2c66" stroke-width="6" stroke-linecap="round">
+    <circle cx="334" cy="170" r="36"/><circle cx="424" cy="170" r="36"/>
+    <path d="M370 172q9-8 18 0"/>
+    <path d="M320 180q14-18 28 0"/><path d="M410 180q14-18 28 0"/>
+  </g>
+  <path d="M364 210q15 26 30 0z" fill="#3d2c66" stroke="#3d2c66" stroke-width="6" stroke-linejoin="round"/>
+  <ellipse cx="379" cy="222" rx="7" ry="4" fill="#e86b8f"/>
+
+  <!-- Carpeta con Ψ -->
+  <g transform="rotate(12 540 210)">
+    <rect x="490" y="140" width="104" height="138" rx="12" fill="#7a5cc4" stroke="#45306f" stroke-width="7"/>
+    <rect x="520" y="128" width="44" height="22" rx="6" fill="#45306f"/>
+    <text x="542" y="238" text-anchor="middle" font-family="Georgia,serif" font-size="70" fill="#cbbaf5">Ψ</text>
+  </g>
+  <circle cx="566" cy="262" r="22" fill="#45306f"/>
+
+  <!-- Nombre -->
+  <text x="380" y="410" text-anchor="middle" class="word"><tspan fill="#3d2c66">humana-</tspan><tspan fill="#7b4fdb">mente</tspan></text>
+
+  <!-- Lema -->
+  <g stroke="#cfc4ec" stroke-width="5" stroke-linecap="round"><path d="M90 470h90"/><path d="M580 470h90"/></g>
+  <text x="380" y="481" text-anchor="middle" class="tag" fill="#7d6aa8">Tu bienestar, paso a paso</text>
+</svg>

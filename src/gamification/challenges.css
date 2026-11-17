@@ -1,0 +1,33 @@
+/* Desafío semanal e Invernadero */
+.challenge-card{border-color:var(--teal-200);background:linear-gradient(180deg,var(--teal-50),var(--surface) 70%)}
+.challenge-card .eyebrow{display:block;margin-bottom:4px}
+.challenge-card .card-heading{margin-bottom:10px;align-items:flex-start}
+.challenge-emoji{flex:none;font-size:28px;width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--teal-100);border:2px solid var(--teal-200);border-bottom-width:4px}
+.challenge-desc{margin:0;color:var(--ink-soft);font-size:14px;line-height:1.45}
+.challenge-progress{display:flex;align-items:center;gap:12px;margin-top:14px}
+.challenge-progress .progress-track{flex:1;min-width:0}
+.challenge-progress span{font-weight:900;color:var(--teal-700);font-size:14px;white-space:nowrap}
+.challenge-reward{margin:12px 0 0;padding:10px 12px;border-radius:14px;background:var(--teal-100);color:var(--teal-800);font-size:13px;font-weight:800;line-height:1.4}
+.challenge-note{margin:8px 0 0;font-size:12px;color:var(--ink-muted)}
+.challenge-card.done{border-color:var(--teal-500)}
+.challenge-card.done .challenge-emoji{background:var(--teal-500);border-color:var(--teal-700);animation:challenge-pop .5s ease-out}
+.challenge-card.done .challenge-reward{background:var(--teal-700);color:var(--surface)}
+@keyframes challenge-pop{0%{transform:scale(.6)}70%{transform:scale(1.12)}100%{transform:scale(1)}}
+
+.greenhouse-slots{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.greenhouse-slot{display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 6px;border-radius:18px;border:2px solid var(--teal-200);border-bottom-width:4px;background:var(--surface);text-align:center;min-width:0}
+.greenhouse-slot small{font-size:11px;font-weight:800;color:var(--ink-soft);line-height:1.25;overflow-wrap:anywhere}
+.greenhouse-emoji{font-size:28px;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--teal-100)}
+.greenhouse-slot.earned .greenhouse-emoji{animation:challenge-pop .5s ease-out}
+.greenhouse-slot.missing{border-color:var(--line);background:var(--bg)}
+.greenhouse-slot.missing .greenhouse-emoji{background:var(--neutral-100);color:var(--ink-muted);font-weight:900;font-size:22px}
+.greenhouse-slot.missing small{color:var(--ink-muted)}
+.greenhouse-past{list-style:none;margin:14px 0 0;padding:14px 0 0;border-top:2px solid var(--line);display:grid;gap:8px}
+.greenhouse-past li{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:13px;font-weight:800;color:var(--ink)}
+.greenhouse-past small{color:var(--ink-muted);font-weight:700}
+.greenhouse-past-pieces{display:flex;align-items:center;gap:4px;font-size:18px}
+.greenhouse-past-pieces .missing{color:var(--line-strong);width:18px;text-align:center}
+.greenhouse-complete{font-size:11px;color:var(--teal-700);background:var(--teal-100);border-radius:999px;padding:2px 8px;margin-left:4px}
+
+@media(max-width:760px){.challenge-card,.greenhouse{padding:16px}.greenhouse-slots{gap:6px}.greenhouse-slot{padding:10px 4px;border-radius:16px}.greenhouse-emoji{width:40px;height:40px;font-size:22px}.greenhouse-slot small{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.challenge-card.done .challenge-emoji,.greenhouse-slot.earned .greenhouse-emoji{animation:none}}
